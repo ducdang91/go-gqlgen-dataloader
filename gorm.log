@@ -1,0 +1,171 @@
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.485ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.716ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.215ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'test_db' AND table_name = 'user' AND table_type = 'BASE TABLE'
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.072ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.914ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.070ms] [34;1m[rows:-][0m SELECT * FROM `user` LIMIT 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.893ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'test_db' AND table_name = 'user' ORDER BY ORDINAL_POSITION
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.461ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.362ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.068ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'test_db' AND table_name = 'transaction' AND table_type = 'BASE TABLE'
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.468ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.235ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.431ms] [34;1m[rows:-][0m SELECT * FROM `transaction` LIMIT 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.900ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'test_db' AND table_name = 'transaction' ORDER BY ORDINAL_POSITION
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[2.886ms] [34;1m[rows:0][0m ALTER TABLE `transaction` MODIFY COLUMN `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.686ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[2.607ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[3.086ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'test_db' AND table_name = 'transaction' AND constraint_name = 'fk_transaction_user'
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.612ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.175ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.422ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'test_db' AND table_name = 'transaction_detail' AND table_type = 'BASE TABLE'
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.501ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.131ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.327ms] [34;1m[rows:-][0m SELECT * FROM `transaction_detail` LIMIT 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.575ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'test_db' AND table_name = 'transaction_detail' ORDER BY ORDINAL_POSITION
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[0.533ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.237ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'test_db%' ORDER BY SCHEMA_NAME='test_db' DESC,SCHEMA_NAME limit 1
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[1.877ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'test_db' AND table_name = 'transaction_detail' AND constraint_name = 'fk_transaction_transaction_details'
+
+2022/12/28 15:59:48 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/migration/migration.go:10
+[0m[33m[24.110ms] [34;1m[rows:0][0m ALTER TABLE `transaction_detail` ADD CONSTRAINT `fk_transaction_transaction_details` FOREIGN KEY (`transaction_id`) REFERENCES `transaction`(`id`)
+
+2022/12/28 16:07:29 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[2.040ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,4),('Laravel Course',50000.000000,NULL,4) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:29 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[7.542ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:29.835')
+
+2022/12/28 16:07:29 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[1.568ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 4
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[8.904ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,5),('Laravel Course',50000.000000,NULL,5) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[14.481ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:34.157')
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[1.429ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 5
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[0.944ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,6),('Laravel Course',50000.000000,NULL,6) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[11.983ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:34.59')
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[2.541ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 6
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[1.480ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,7),('Laravel Course',50000.000000,NULL,7) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[12.566ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:34.798')
+
+2022/12/28 16:07:34 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[1.179ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 7
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[1.188ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,8),('Laravel Course',50000.000000,NULL,8) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[5.832ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:35.01')
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[1.959ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 8
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[1.285ms] [34;1m[rows:2][0m INSERT INTO `transaction_detail` (`name`,`price`,`discount`,`transaction_id`) VALUES ('Golang Course',10000.000000,5000.000000,9),('Laravel Course',50000.000000,NULL,9) ON DUPLICATE KEY UPDATE `transaction_id`=VALUES(`transaction_id`)
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:28
+[0m[33m[12.440ms] [34;1m[rows:1][0m INSERT INTO `transaction` (`user_id`,`created_at`) VALUES (1,'2022-12-28 09:07:35.949')
+
+2022/12/28 16:07:35 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[1.369ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 9
+
+2022/12/28 16:23:51 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/user.go:29
+[0m[33m[1.547ms] [34;1m[rows:1][0m SELECT * FROM `user`
+
+2022/12/28 16:23:51 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction.go:50
+[0m[33m[2.821ms] [34;1m[rows:8][0m SELECT * FROM `transaction` WHERE user_id = 1
+
+2022/12/28 16:23:51 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[44.970ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 9
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.714ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 6
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.798ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 7
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.771ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 5
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.738ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 8
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.777ms] [34;1m[rows:0][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 3
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.879ms] [34;1m[rows:0][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 2
+
+2022/12/28 16:23:52 [32m/home/ducdt/go/src/github.com/ducdang91/go-gqlgen-dataloader/service/transaction_detail.go:24
+[0m[33m[136.898ms] [34;1m[rows:2][0m SELECT * FROM `transaction_detail` WHERE transaction_id = 4
