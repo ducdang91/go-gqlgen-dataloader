@@ -2,10 +2,9 @@ package service
 
 import (
 	"context"
-	"time"
-
 	"github.com/ducdang91/go-gqlgen-dataloader/config"
 	"github.com/ducdang91/go-gqlgen-dataloader/graph/model"
+	"time"
 )
 
 func TransactionCreate(ctx context.Context, input model.NewTransaction) (*model.Transaction, error) {

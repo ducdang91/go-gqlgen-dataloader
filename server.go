@@ -1,20 +1,23 @@
 package main
 
 import (
-	"github.com/ducdang91/go-gqlgen-dataloader/config"
-	"github.com/ducdang91/go-gqlgen-dataloader/graph"
 	"log"
 	"net/http"
 	"os"
 
+	"github.com/ducdang91/go-gqlgen-dataloader/config"
+	"github.com/ducdang91/go-gqlgen-dataloader/dataloader"
+	"github.com/ducdang91/go-gqlgen-dataloader/graph"
+	"github.com/ducdang91/go-gqlgen-dataloader/graph/generated"
+	"github.com/ducdang91/go-gqlgen-dataloader/migration"
+
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/ducdang91/go-gqlgen-dataloader/migration"
+	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 )
 
 const defaultPort = "8080"
-
 
 func init() {
 	// Load Environment from .env
@@ -32,17 +35,20 @@ func main() {
 
 	// Migration
 	migration.MigrateTable()
-	
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
 	}
 
-	srv := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &graph.Resolver{}}))
+	router := mux.NewRouter()
+	router.Use(dataloader.Middleware)
 
-	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
-	http.Handle("/query", srv)
+	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
+
+	router.Handle("/", playground.Handler("GraphQL playground", "/query"))
+	router.Handle("/query", srv)
 
 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }

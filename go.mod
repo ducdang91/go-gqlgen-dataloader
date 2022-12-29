@@ -3,41 +3,29 @@ module github.com/ducdang91/go-gqlgen-dataloader
 go 1.19
 
 require (
-	github.com/99designs/gqlgen v0.17.22
-	github.com/joho/godotenv v1.4.0
-	github.com/vektah/gqlparser/v2 v2.5.1
-	gorm.io/driver/mysql v1.4.4
-	gorm.io/gorm v1.24.2
+	github.com/99designs/gqlgen v0.13.0
+	github.com/gorilla/mux v1.6.1
+	github.com/joho/godotenv v1.3.0
+	github.com/vektah/gqlparser/v2 v2.1.0
+	gorm.io/driver/mysql v1.0.4
+	gorm.io/gorm v1.20.12
 )
 
 require (
-	github.com/agnivade/levenshtein v1.1.1 // indirect
-	github.com/cilium/ebpf v0.9.3 // indirect
-	github.com/cosiner/argv v0.1.0 // indirect
-	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
-	github.com/derekparker/trie v0.0.0-20221221181808-1424fce0c981 // indirect
-	github.com/go-delve/delve v1.20.1 // indirect
-	github.com/go-delve/liner v1.2.3-0.20220127212407-d32d89dd2a5d // indirect
-	github.com/go-sql-driver/mysql v1.6.0 // indirect
-	github.com/google/go-dap v0.7.0 // indirect
-	github.com/gorilla/websocket v1.5.0 // indirect
-	github.com/hashicorp/golang-lru v0.5.4 // indirect
-	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/agnivade/levenshtein v1.0.3 // indirect
+	github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d // indirect
+	github.com/go-sql-driver/mysql v1.5.0 // indirect
+	github.com/gorilla/context v0.0.0-20160226214623-1ea25387ff6f // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/hashicorp/golang-lru v0.5.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
-	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
-	github.com/mattn/go-isatty v0.0.16 // indirect
-	github.com/mattn/go-runewidth v0.0.14 // indirect
-	github.com/mitchellh/mapstructure v1.5.0 // indirect
-	github.com/rivo/uniseg v0.4.3 // indirect
-	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/sirupsen/logrus v1.9.0 // indirect
-	github.com/spf13/cobra v1.6.1 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
-	go.starlark.net v0.0.0-20221205180719-3fd0dac74452 // indirect
-	golang.org/x/arch v0.2.0 // indirect
-	golang.org/x/sys v0.3.0 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	github.com/jinzhu/now v1.1.1 // indirect
+	github.com/mitchellh/mapstructure v0.0.0-20180203102830-a4e142e9c047 // indirect
+	github.com/pkg/errors v0.8.1 // indirect
+	github.com/russross/blackfriday/v2 v2.0.1 // indirect
+	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/stretchr/testify v1.5.1 // indirect
+	github.com/urfave/cli/v2 v2.1.1 // indirect
+	golang.org/x/tools v0.0.0-20200114235610-7ae403b6b589 // indirect
+	gopkg.in/yaml.v2 v2.2.4 // indirect
 )

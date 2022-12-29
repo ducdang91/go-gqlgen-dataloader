@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/ducdang91/go-gqlgen-dataloader/config"
+
 	"github.com/ducdang91/go-gqlgen-dataloader/graph/model"
 )
 

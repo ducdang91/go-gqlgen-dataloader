@@ -21,20 +21,11 @@ func GetDB() *gorm.DB {
 	return db
 }
 
-const DB_USERNAME = "root"
-const DB_PASSWORD = "qweqwe"
-const DB_NAME = "test_db"
-const DB_HOST = "localhost"
-const DB_PORT = "3307"
-const DB_SCHEMA = "test_db"
-
 //ConnectGorm Database Connection to Gorm V2
 func ConnectGorm() {
 	databaseConfig := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?multiStatements=true&parseTime=true", os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_DATABASE"))
 
-	log.Println(databaseConfig)
 	var err error
-	//dsn := DB_USERNAME + ":" + DB_PASSWORD + "@tcp" + "(" + DB_HOST + ":" + DB_PORT + ")/" + DB_SCHEMA + "?" + "parseTime=true&loc=Local"
 	db, err = gorm.Open(mysql.Open(databaseConfig), initConfig())
 
 	if err != nil {

@@ -1,5 +1,9 @@
 package graph
 
+import (
+	_ "github.com/99designs/gqlgen/plugin"
+)
+
 //go:generate go run github.com/99designs/gqlgen
 // This file will not be regenerated automatically.
 //

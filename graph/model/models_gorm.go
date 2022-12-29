@@ -16,7 +16,7 @@ type Transaction struct {
 	Summary   *TransactionSummary `json:"summary" gorm:"-"`
 
 	// Attribute For Foreign Key
-	User User `json:"user" gorm:"foreignKey:user_id;constraint:OnUpdate:CASCADE,OnDELETE:CASCADE"`
+	User               User                `json:"user" gorm:"foreignKey:user_id;constraint:OnUpdate:CASCADE,OnDELETE:CASCADE"`
 	TransactionDetails []TransactionDetail `json:"transaction_details"`
 }
 
